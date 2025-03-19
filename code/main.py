@@ -1,8 +1,14 @@
 import os
 from IPython.display import Markdown, display, update_display
+from datetime import datetime
 from openai import OpenAI
 from decouple import config
 from yaml_handler import YAMLHandler
+from logger import Logger
+
+
+logger = Logger("code_interpreter")
+
 
 MODEL='gpt-4o-mini'
 MODEL_LLAMA = 'llama3.2'
@@ -24,7 +30,7 @@ def system_prompt():
     yaml_handler = YAMLHandler("input.yaml")
     yaml_data = yaml_handler.read_yaml()
     system_prompt = yaml_data.get("system_prompt")
-    print(f"system_prompt: {system_prompt}")
+    Logger.info(f"system_prompt: {system_prompt}")
     return system_prompt
     
 def code_explain(LLM, model, question):
@@ -49,7 +55,8 @@ def code_explain(LLM, model, question):
         llm = 'openai'
     else:
         llm = 'ollama'
-    output_file = os.path.join(output_dir,f"code_explain_{llm}.md")
+    date = datetime.now().strftime("%Y-%m-%d")
+    output_file = os.path.join(output_dir,f"code_explain_{llm}_{date}.md")
 
     with open(output_file, "w", encoding="utf-8") as file:
         for chunk in stream:
@@ -63,7 +70,7 @@ def code_explain(LLM, model, question):
 
             file.write(text)
 
-    print(f"Brochure saved to: {output_file}")
+    logger.info(f"Brochure saved to: {output_file}")
 
 if __name__ == "__main__":
     system_prompt()
