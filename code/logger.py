@@ -4,7 +4,7 @@ import os
 class Logger:
     def __init__(self, project_name):
         self.project_name = project_name
-        self.log_path = f"log/{self.project_name}.log"
+        self.log_path = f"../log/{self.project_name}.log"
 
         # Ensure the log directory exists
         os.makedirs("log", exist_ok=True)
