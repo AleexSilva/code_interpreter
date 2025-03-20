@@ -3,7 +3,7 @@ import yaml
 from typing import Any
 
 class YAMLHandler:
-    def __init__(self, filename: str, input_dir: str = "../input"):
+    def __init__(self, filename: str, input_dir: str = "../yaml_files"):
         self.filepath = os.path.join(input_dir, filename)
         
     def read_yaml(self) -> dict:
