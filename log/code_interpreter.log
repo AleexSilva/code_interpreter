@@ -1,0 +1,6 @@
+2025-03-19 17:57:36,870 - INFO - API key looks good so far
+2025-03-19 18:02:07,755 - INFO - API key looks good so far
+2025-03-20 08:21:14,429 - INFO - API key looks good so far
+2025-03-20 08:21:40,126 - INFO - system_prompt: You are an assistant that focuses on the reason for each code, analysing and interpreting what the code does and how it could be improved, Give your answer in markdown down with two different topics namely: Explanation and Code Improvement. However if you think there is no possible improvement to said code, simply state 'no possible improvement '
+2025-03-20 08:21:53,128 - INFO - system_prompt: You are an assistant that focuses on the reason for each code, analysing and interpreting what the code does and how it could be improved, Give your answer in markdown down with two different topics namely: Explanation and Code Improvement. However if you think there is no possible improvement to said code, simply state 'no possible improvement '
+2025-03-20 08:22:11,142 - INFO - system_prompt: You are an assistant that focuses on the reason for each code, analysing and interpreting what the code does and how it could be improved, Give your answer in markdown down with two different topics namely: Explanation and Code Improvement. However if you think there is no possible improvement to said code, simply state 'no possible improvement '
