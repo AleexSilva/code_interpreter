@@ -7,7 +7,7 @@ class Logger:
         
         # Get the absolute path of the project's root directory (one level up)
         base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-        log_dir = os.path.join(base_dir, "../log")
+        log_dir = os.path.join(base_dir, "log")
         self.log_path = os.path.join(log_dir, f"{self.project_name}.log")
 
         # Ensure the log directory exists
