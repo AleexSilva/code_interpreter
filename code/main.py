@@ -23,11 +23,6 @@ else:
 openai = OpenAI(api_key = api_key)
 ollama = OpenAI(base_url='http://localhost:11434/v1', api_key='ollama')
 
-question = """
-Please explain what this code does and why:\n
-yield from {book.get("author") for book in books if book.get("author")}\n
-The output should include the origal code
-"""
 
 def system_prompt():
     """
